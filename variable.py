@@ -6,5 +6,5 @@ print(y)
 coding = "codingal"
 print(coding)
 
-name = input("Enter your name;")
+name = input("Enter your name:")
 print("\nHello",name,"\nWelcome to the Coding World!")
