@@ -29,18 +29,12 @@ while True:
     elif user_input.lower() == "reset":
         conversation_history.clear()
         print(f"{Fore.CYAN}Conversation history cleared.{Style.RESET_ALL}")
-    for idx, (text, polarity, sentiment_type) in enumerate(conversation_history, 1):
-        if sentiment_type == "positive":
-            color = Fore.GREEN
-            emoji = "😊"
-        elif sentiment_type == "negative":
-            color = Fore.RED
-            emoji = "😞"
-        else:
-            color = Fore.YELLOW
-            emoji = "😐"
-        print(f"{idx}. {color}{emoji}{text} (Polarity: {polarity:.2f}, {sentiment_type}){Style.RESET_ALL}")
-    continue
+        continue
+    elif user_input.lower() == "history":
+        if not conversation_history:
+             
+      
+    else:
 polarity = TextBlob(user_input).sentiment.polarity
 if polarity > 0.25:
     sentiment_type = "positive"
